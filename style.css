@@ -665,7 +665,9 @@ h2 {
 .modal-xl {
   width: 800px;
 }
-
+/* a {
+  color: #0000 !important;
+} */
 a:active {
   color: #0000 !important;
 }
