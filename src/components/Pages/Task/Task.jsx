@@ -3,7 +3,7 @@ import './Task.css';
 
 function Task() {
   return (
-    <div>
+    <div className='sub_body container'>
       {/*      
 <!--Product Listing -->
 

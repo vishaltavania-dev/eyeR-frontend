@@ -1,24 +1,19 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import './Header.css';
 
 function Header() {
   useEffect(() => {});
-  // scroll direction hoooks
-  // scroll direction hook
 
-  // console.log(scrollDirection);
-
-  // scroll direction hooks end
-  // desktop view
   return (
     <div>
       <nav class='main_heading'>
         <div class='d-flex'>
           <div class='d-flex main_header justify-content-center'>
             <div class='center-content d-flex align-items-center'>
-              <a href='#overview'>
+              <Link className='nav-link demo__navLink' to='/dashboard'>
                 <div class='d-flex active_button header_button'>
                   <svg
                     width='25'
@@ -58,9 +53,8 @@ function Header() {
                   </svg>
                   <span>Dashboard</span>
                 </div>
-              </a>
-
-              <a href='#productlisting'>
+              </Link>
+              <Link className='nav-link demo__navLink' to='/task'>
                 <div class='d-flex header_button'>
                   <svg
                     width='25'
@@ -87,9 +81,9 @@ function Header() {
                     </defs>
                   </svg>
 
-                  <span class='task_not_completed'>Task not completed</span>
+                  <span class='task_not_completed'>Task </span>
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
           <div class='right-header d-flex '>
