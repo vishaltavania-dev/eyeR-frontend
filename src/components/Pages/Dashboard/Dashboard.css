@@ -1,0 +1,21 @@
+.custom-modal {
+  display: none;
+}
+
+.sub_heading {
+  /* position: absolute;
+    top: 120px;
+    left: 132px; */
+  font-family: Lexend; /* Heading */
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 48px;
+  color: #323743ff; /* neutral-700 */
+}
+.overview_sub_heading {
+  font-family: Lexend; /* Heading */
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #565d6dff; /* neutral-600 */
+}
