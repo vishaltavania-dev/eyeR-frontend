@@ -2,6 +2,7 @@ import React from 'react';
 import './Dashboard.css';
 
 import { useState, useEffect } from 'react';
+import Indicator from '../../Indicators';
 
 function Dashboard() {
   return (
@@ -605,39 +606,12 @@ function Dashboard() {
       </div>
 
       {/* <!-- Indicators --> */}
-      <div id='indicator' class='overview_section p-3 mt-4 pb-4'>
+      {/* <div id='indicator' class='overview_section p-3 mt-4 pb-4'>
         <div class='overview_section_heading d-flex justify-content-space-between align-items-center'>
           <h1 class='overview_sub_heading'>Indicators</h1>
           <div class='calendar_subheading'></div>
         </div>
         <div class='box_wrapper_indicator'>
-          <div class='indicator_box indicator_box_one'>
-            <div class='indicator_box_heading'>
-              <span>Top Rated Dishes</span>
-              <svg
-                width='24'
-                height='24'
-                viewBox='0 0 24 24'
-                fill='none'
-                xmlns='http://www.w3.org/2000/svg'
-              >
-                <path
-                  d='M21.5683 9.77645C21.5316 9.66282 21.4638 9.56174 21.3726 9.48465C21.2814 9.40756 21.1704 9.35754 21.0523 9.34025L15.1939 8.48885L12.5743 3.18005C12.5154 3.08015 12.4314 2.99735 12.3307 2.93983C12.23 2.88231 12.116 2.85205 12.0001 2.85205C11.8841 2.85205 11.7701 2.88231 11.6694 2.93983C11.5687 2.99735 11.4848 3.08015 11.4259 3.18005L8.80628 8.48765L2.94788 9.34025C2.82967 9.35746 2.71864 9.40739 2.62734 9.48441C2.53603 9.56142 2.46809 9.66244 2.4312 9.77605C2.39431 9.88966 2.38994 10.0113 2.41858 10.1273C2.44722 10.2432 2.50773 10.3489 2.59328 10.4323L6.83288 14.5639L5.83268 20.4001C5.81244 20.5177 5.82555 20.6387 5.87051 20.7493C5.91547 20.8599 5.99048 20.9557 6.08707 21.0259C6.18366 21.0961 6.29796 21.1378 6.41704 21.1464C6.53612 21.155 6.65522 21.13 6.76088 21.0745L12.0001 18.3187L17.2399 21.0733C17.3454 21.1287 17.4644 21.1536 17.5833 21.1451C17.7023 21.1365 17.8165 21.0949 17.913 21.0249C18.0096 20.9549 18.0846 20.8593 18.1297 20.7488C18.1747 20.6384 18.188 20.5176 18.1681 20.4001L17.1679 14.5651L21.4075 10.4335C21.493 10.3499 21.5534 10.2441 21.5818 10.1279C21.6103 10.0118 21.6056 9.89005 21.5683 9.77645Z'
-                  fill='#EFB034'
-                />
-              </svg>
-            </div>
-            <div class='d-flex'>
-              <div class='singleTag mr-2'>Biryani</div>
-              <div class='singleTag'>Pizza</div>
-            </div>
-          </div>
-          <div class='indicator_box indicator_box_two'>
-            <div class='indicator_box_heading'>
-              <span>Best Performing Branches</span>
-            </div>
-            <div class='singleTag best_performing'>Makati</div>
-          </div>
           <div class='indicator_box indicator_box_three'>
             <div class='indicator_box_heading'>
               <span>Postives</span>
@@ -658,11 +632,12 @@ function Dashboard() {
                 />
               </svg>
             </div>
-            <div class='d-flex'>
-              <div class='singleTag postives mr-2'>Packaging</div>
-              <div class='singleTag postives'>Cutlery</div>
+            <div class='row'>
+              <div class='singleTag postives  mt-2 mr-2 col-5'>Packaging</div>
+              <div class='singleTag postives  mt-2 mr-2 col-5'>Cutlery</div>
+              <div class='singleTag postives mt-2 mr-2 col-5'>Taste</div>
             </div>
-            <div class='singleTag postives mt-2'>Taste</div>
+           
           </div>
           <div class='indicator_box indicator_box_four'>
             <div class='indicator_box_heading'>
@@ -684,15 +659,41 @@ function Dashboard() {
                 />
               </svg>
             </div>
-            <div class='d-flex'>
-              <div class='singleTag negative mr-2'>Serving Size</div>
-              <div class='singleTag negative'>Falafei</div>
+            <div class='row '>
+              <div class='singleTag negative mt-2 mr-2 col-5'>Serving Size</div>
+              <div class='singleTag negative mt-2 mr-2 col-5'>Falafei</div>
+            </div>
+          </div>
+          <div class='indicator_box indicator_box_four'>
+            <div class='indicator_box_heading'>
+              <span>Neutral</span>
+              <svg
+                width='24'
+                height='25'
+                viewBox='0 0 24 25'
+                fill='none'
+                xmlns='http://www.w3.org/2000/svg'
+              >
+                <path
+                  d='M6.6001 13.7H4.2001C4.04097 13.7 3.88836 13.6368 3.77583 13.5243C3.66331 13.4117 3.6001 13.2591 3.6001 13.1L3.6001 4.1C3.6001 3.94087 3.66331 3.78826 3.77583 3.67574C3.88836 3.56321 4.04097 3.5 4.2001 3.5L6.6001 3.5L6.6001 13.7Z'
+                  fill='#DE3B40'
+                />
+                <path
+                  d='M7.7998 3.5L16.9678 3.5C17.5279 3.50054 18.0703 3.69698 18.5008 4.05531C18.9313 4.41363 19.223 4.91126 19.3252 5.462L20.3896 11.1902C20.3963 11.2264 20.3997 11.2632 20.3998 11.3V11.9C20.3998 12.5365 20.1469 13.147 19.6969 13.5971C19.2468 14.0471 18.6363 14.3 17.9998 14.3H12.5998V19.7C12.5998 20.3365 12.3469 20.947 11.8969 21.3971C11.4468 21.8471 10.8363 22.1 10.1998 22.1C10.0623 22.1001 9.929 22.0531 9.82207 21.9667C9.71515 21.8803 9.64113 21.7598 9.6124 21.6254L7.7998 13.7L7.7998 3.5Z'
+                  fill='#DE3B40'
+                />
+              </svg>
+            </div>
+            <div class='row '>
+              <div class='singleTag neutral mt-2 mr-2 col-5'>Serving Size</div>
+              <div class='singleTag neutral mt-2 mr-2 col-5'>Falafei</div>
             </div>
           </div>
         </div>
 
         <div></div>
-      </div>
+      </div> */}
+      <Indicator />
     </div>
   );
 }

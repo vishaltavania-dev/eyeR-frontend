@@ -1,5 +1,5 @@
 import './App.css';
-import { useState, useEffect } from 'react';
+import Login from './components/Authentication/Login';
 import Header from './components/Header/Header';
 import Dashboard from './components/Pages/Dashboard/Dashboard';
 import Task from './components/Pages/Task/Task';
@@ -14,6 +14,7 @@ import {
   Routes,
   Navigate,
 } from 'react-router-dom';
+import { useState } from 'react';
 
 Chart.register(CategoryScale);
 
@@ -61,6 +62,7 @@ function App() {
             path='/lineChart'
             element={<LineChart chartData={chartData} />}
           ></Route>
+          <Route path='/login' element={<Login/>}></Route>
         </Routes>
       </Router>
     </div>

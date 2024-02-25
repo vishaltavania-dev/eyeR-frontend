@@ -1,0 +1,25 @@
+.login-main-container {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    margin: 40px 20px;
+}
+
+.login-dashboard-img {
+    max-width: 550px;
+    height: 600px;
+}
+
+.login-input-container {
+    margin: 20px;
+    border-radius: 8px;
+}
+
+.login-heading-text {
+    font-family: Lexend;
+    /* Heading */
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 48px;
+    color: #323743ff;
+}
